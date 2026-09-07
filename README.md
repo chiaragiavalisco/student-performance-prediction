@@ -122,54 +122,34 @@ $$	ext{PerformanceIndex}  pprox -33.755 + 2.861(x_1) + 1.018(x_2) + 0.474(x_3) +
 2. **Model Choice**: Because the underlying data generating process displays strong linear characteristics ($R^2  pprox 0.99$), the Multiple Linear Regression model provides nearly identical accuracy to the ANN while offering full mathematical interpretability and parameter tractability.
 
 ---
+## 🚀 Getting Started & Usage
 
-## 💻 Prerequisites & Installation
-
-### Requirements
+### Prerequisites
 - **MATLAB** (R2020b or later recommended)
 - **Statistics and Machine Learning Toolbox** (for `fitlm`, `anova`, `cvpartition`)
 - **Deep Learning Toolbox** (for `feedforwardnet`, `dividerand`, `perform`)
 
-### Setup
-Clone the repository:
-```bash
-git clone https://github.com/chiaragiavalisco/student-performance-prediction.git
+### Running the Script
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/chiaragiavalisco/student-performance-prediction.git
 cd student-performance-prediction
-```
----
 
-## 🚀 How to Run
-
-1. **Run Linear Regression Analysis**:
-   Open MATLAB and execute:
+2. Open MATLAB, navigate to the cloned folder, and run:
    ```matlab
-   linear_regression
+   run('linear_regression.m')
+   run('neural_network.m')
    ```
-   *Generates correlation matrices, target distribution histograms, ANOVA summary tables, residual distribution plots, and single-sample predictions.*
+---
 
-2. **Run Neural Network Training**:
-   Execute:
-   ```matlab
-   neural_network
-   ```
-   *Executes Z-score scaling, initializes the 20-neuron feedforward architecture, plots training state/regression fits, and reports out-of-sample MSE and RMSE.*
+## 👤 Author
+
+**Chiara Giavalisco**  
+* Master's Degree Coursework: *Numerical Methods for Data Mining*  
+* [LinkedIn Profile](https://www.linkedin.com/in/chiara-giavalisco-28b1b9268/) • [GitHub Profile](https://github.com/chiaragiavalisco) • [Email](mailto:chiara.giavalisco@gmail.com)
 
 ---
 
-## 👤 Author & Acknowledgments
+## 📄 License
+This project is open-source and available under the [MIT License](LICENSE).
 
-- **Chiara Giavalisco**  
-  *Dipartimento di Matematica e Applicazioni "Renato Caccioppoli"*,  
-  Università degli Studi di Napoli Federico II, Napoli, Italy  
-  Email: `c.giavalisco@studenti.unina.it`
-
----
-
-## 📚 References
-
-1. Nikhil. *Student Performance Multiple Linear Regression Dataset*. [Kaggle](https://www.kaggle.com/datasets/nikhil7280/student-performance-multiple-linear-regression).
-2. Cui, N. (2018). *Applying gradient descent in convolutional neural networks*. Journal of Physics: Conference Series, 1004, 012027.
-3. Izenman, A. J. (2008). *Modern Multivariate Statistical Techniques*. Springer.
-4. Montgomery, D. C., Peck, E. A., & Vining, G. G. (2021). *Introduction to Linear Regression Analysis*. John Wiley & Sons.
-5. Sravani, B., & Bala, M. M. (2020). *Prediction of student performance using linear regression*. In 2020 International Conference for Emerging Technology (INCET), pp. 1–5.
-6. Zou, J., Han, Y., & So, S. S. (2009). *Overview of artificial neural networks*. Artificial Neural Networks: Methods and Applications, pp. 14–22.
