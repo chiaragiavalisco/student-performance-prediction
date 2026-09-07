@@ -1,12 +1,17 @@
-%% =========================================================================
-%  Student Performance - Linear Regression Analysis
-%  Description: Predictive modeling of student performance using multiple
+% =========================================================================
+% Title:       Student Performance - Linear Regression Analysis
+% Course:      Numerical Methods for Data Mining
+% Author:      Chiara Giavalisco
+% Description: Predictive modeling of student performance using multiple
 %               linear regression, residual analysis, and test evaluation.
 % =========================================================================
 
 clear; close all; clc;
 
+%% =========================================================================
 % 1. Data Loading and Preparation
+% =========================================================================
+
 % Load dataset
 data = readtable('Student_Performance.csv');
 
@@ -40,7 +45,10 @@ title('Target Distribution: Performance Index');
 xlabel('Performance Index');
 ylabel('Count');
 
+%% =========================================================================
 % 2. Dataset Partitioning (Train / Test Split)
+% =========================================================================
+
 n = size(Xd, 1);
 
 % Fix seed for reproducibility
@@ -51,7 +59,10 @@ c = cvpartition(height(Xd), "HoldOut", 0.3);
 trainData = Xd(training(c), :);
 testData  = Xd(test(c), :);
 
+%% =========================================================================
 % 3. Model Training and Diagnostic
+% =========================================================================
+
 % Fit Multiple Linear Regression Model
 mdl = fitlm(trainData(:, 1:4), trainData(:, 5))
 
@@ -73,7 +84,10 @@ plotResiduals(mdl); % Histogram of the model training residuals
 % newMdl2 = step(newMdl1, 'NSteps', 30); 
 % plotResiduals(newMdl2);
 
+%% =========================================================================
 % 4. Model Testing and Evaluation
+% =========================================================================
+
 % Predict responses for the test dataset
 ypred = predict(mdl, testData(:, 1:4));
 
@@ -88,7 +102,10 @@ title('Histogram of Residuals - Test Data');
 xlabel('Residual Error (Predicted - Actual)');
 ylabel('Frequency');
 
+%% =========================================================================
 % 5. Single-Sample Prediction Verification
+% =========================================================================
+
 sampleIdx = 2350;
 
 performance_tested    = testData(sampleIdx, 1:4);
