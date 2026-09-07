@@ -150,6 +150,15 @@ cd student-performance-prediction
 
 ---
 
+## 📚 References & Acknowledgments
+
+- **Dataset**: [Student Performance Dataset (Kaggle)](https://www.kaggle.com/datasets/nikhil7280/student-performance-multiple-linear-regression) by Nikhil (included as `Student_Performance.csv` in this repository).
+- **Linear Regression**: Montgomery, D. C., Peck, E. A., & Vining, G. G. (2021). *Introduction to Linear Regression Analysis*. John Wiley & Sons.
+- **Multivariate Techniques & Machine Learning**: Izenman, A. J. (2008). *Modern Multivariate Statistical Techniques*. Springer.
+- **Artificial Neural Networks**: Yegnanarayana, B. (2009). *Artificial Neural Networks*. PHI Learning Pvt. Ltd. (or Wu, Y. & Feng, J., 2018).
+
+---
+
 ## 📄 License
 This project is open-source and available under the [MIT License](LICENSE).
 
