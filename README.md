@@ -49,10 +49,10 @@ Where:
 - $\epsilon \sim \mathcal{N}(0, \sigma^2 I)$ represents unobservable, homoscedastic, and uncorrelated Gaussian noise.
 
 By the Gauss-Markov Theorem, the Ordinary Least Squares (OLS) estimator $\hat{ \beta} = (X^T X)^{-1} X^T y$ is the Best Linear Unbiased Estimator (BLUE), with variance-covariance:
-$$	\text{Var}(\hat{ \beta}) = \sigma^2 (X^T X)^{-1}, \quad \hat{\sigma}^2 = rac{\hat{\epsilon}^T \hat{\epsilon}}{m - k}$$
+$$	\text{Var}(\hat{\beta}) = \sigma^2 (X^T X)^{-1}, \quad \hat{\sigma}^2 = \frac{\hat{\epsilon}^T \hat{\epsilon}}{m - k}$$
 
 Model fitness is assessed through Analysis of Variance (ANOVA):
-$$	\text{SST} = 	\text{SSR} + 	\text{SSE}, \quad R^2 = \frac{	\text{SSR}}{	\text{SST}} = 1 - \frac{	\text{SSE}}{	\text{SST}}$$
+$$	\text{SST} = 	\text{SSR} + 	\text{SSE}, \quad R^2 = \frac{\text{SSR}}{\text{SST}} = 1 - \frac{\text{SSE}}{\text{SST}}$$
 
 ### Artificial Neural Network (ANN)
 
@@ -92,20 +92,20 @@ $$z = \frac{x - \mu}{\sigma}$$
 
 ### Linear Regression Model Summary
 
-$$	ext{PerformanceIndex}  pprox -33.755 + 2.861(x_1) + 1.018(x_2) + 0.474(x_3) + 0.197(x_4)$$
+$$	\text{PerformanceIndex} \approx -33.755 + 2.861(x_1) + 1.018(x_2) + 0.474(x_3) + 0.197(x_4)$$
 
 | Term | Estimate ($\hat{ eta}$) | Standard Error (SE) | $t$-Statistic | $p$-Value | Significance ($ lpha=0.05$) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **(Intercept)** | -33.755 | 0.15073 | -223.94 | $ pprox 0$ | Statistically Significant |
-| **$x_1$ (Hours Studied)** | 2.8612 | 0.00949 | 301.61 | $ pprox 0$ | Statistically Significant |
-| **$x_2$ (Previous Scores)** | 1.0180 | 0.00141 | 721.84 | $ pprox 0$ | Statistically Significant |
-| **$x_3$ (Sleep Hours)** | 0.4738 | 0.01444 | 32.82 | $7.62 	imes 10^{-220}$ | Statistically Significant |
-| **$x_4$ (Question Papers)** | 0.1972 | 0.00851 | 23.17 | $1.75 	imes 10^{-114}$ | Statistically Significant |
+| **(Intercept)** | -33.755 | 0.15073 | -223.94 | $ \approx 0$ | Statistically Significant |
+| **$x_1$ (Hours Studied)** | 2.8612 | 0.00949 | 301.61 | $ \approx 0$ | Statistically Significant |
+| **$x_2$ (Previous Scores)** | 1.0180 | 0.00141 | 721.84 | $ \approx 0$ | Statistically Significant |
+| **$x_3$ (Sleep Hours)** | 0.4738 | 0.01444 | 32.82 | $7.62 	\times 10^{-220}$ | Statistically Significant |
+| **$x_4$ (Question Papers)** | 0.1972 | 0.00851 | 23.17 | $1.75 	\times 10^{-114}$ | Statistically Significant |
 
 - **Number of Observations**: 7,000 (Train) / Degrees of Freedom: 6,995
 - **Root Mean Squared Error (RMSE)**: $2.05$
 - **Coefficient of Determination ($R^2$)**: $0.989$ (Adjusted $R^2 = 0.989$)
-- **$F$-statistic vs. Constant Model**: $1.52 	imes 10^5$ ($p	ext{-value} = 0$)
+- **$F$-statistic vs. Constant Model**: $1.52 \times 10^5$ ($p	\text{-value} = 0$)
 - **Single-Sample Test (#2350)**:
   - Actual Performance: `71.0000`
   - Predicted Performance: `72.8119` (High predictive agreement)
@@ -115,11 +115,11 @@ $$	ext{PerformanceIndex}  pprox -33.755 + 2.861(x_1) + 1.018(x_2) + 0.474(x_3) +
 - **Convergence**: Met validation check criterion at Epoch 11 (Best validation performance at Epoch 5).
 - **Normalized Test RMSE**: `0.1071`
 - **Mean Squared Error (MSE)**: `0.0114`
-- **Regression Fit ($R$)**: $R  pprox 0.994$ across Training, Validation, and Test sets.
+- **Regression Fit ($R$)**: $R \approx 0.994$ across Training, Validation, and Test sets.
 
 ### Key Insights
 1. **Significance**: All 4 features are statistically significant ($p \ll 0.05$). Study hours ($x_1$) and previous test scores ($x_2$) exhibit the highest direct impact on academic success.
-2. **Model Choice**: Because the underlying data generating process displays strong linear characteristics ($R^2  pprox 0.99$), the Multiple Linear Regression model provides nearly identical accuracy to the ANN while offering full mathematical interpretability and parameter tractability.
+2. **Model Choice**: Because the underlying data generating process displays strong linear characteristics ($R^2 \approx 0.99$), the Multiple Linear Regression model provides nearly identical accuracy to the ANN while offering full mathematical interpretability and parameter tractability.
 
 ---
 ## 🚀 Getting Started & Usage
