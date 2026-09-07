@@ -1,7 +1,7 @@
 # Prediction of Student Performance: Multiple Linear Regression vs. Artificial Neural Networks
 
-[![MATLAB](https://img.shields.io/badge/MATLAB-R2020b%2B-blue.svg)](https://www.mathworks.com/products/matlab.html)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![MATLAB](https://img.shields.io/badge/Language-MATLAB-orange.svg)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](#)
 
 An end-to-end comparative study and MATLAB implementation investigating the predictive capability of **Multiple Linear Regression (MLR)** versus a **Feedforward Artificial Neural Network (ANN)** for forecasting student academic performance.
 
