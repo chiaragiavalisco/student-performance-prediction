@@ -45,14 +45,14 @@ $$y = X \beta + \epsilon$$
 Where:
 - $y \in \mathbb{R}^{m 	\times 1}$ represents the response vector.
 - $X \in \mathbb{R}^{m 	\times (n+1)}$ is the design matrix (including the intercept column of 1s).
-- $ \beta \in \mathbb{R}^{(n+1) 	\times 1}$ is the unknown parameter vector.
+- $\beta \in \mathbb{R}^{(n+1)	\times 1}$ is the unknown parameter vector.
 - $\epsilon \sim \mathcal{N}(0, \sigma^2 I)$ represents unobservable, homoscedastic, and uncorrelated Gaussian noise.
 
 By the Gauss-Markov Theorem, the Ordinary Least Squares (OLS) estimator $\hat{ \beta} = (X^T X)^{-1} X^T y$ is the Best Linear Unbiased Estimator (BLUE), with variance-covariance:
-$$	\text{Var}(\hat{\beta}) = \sigma^2 (X^T X)^{-1}, \quad \hat{\sigma}^2 = \frac{\hat{\epsilon}^T \hat{\epsilon}}{m - k}$$
+$$\text{Var}(\hat{\beta}) = \sigma^2 (X^T X)^{-1}, \quad \hat{\sigma}^2 = \frac{\hat{\epsilon}^T \hat{\epsilon}}{m-k}$$
 
 Model fitness is assessed through Analysis of Variance (ANOVA):
-$$	\text{SST} = 	\text{SSR} + 	\text{SSE}, \quad R^2 = \frac{\text{SSR}}{\text{SST}} = 1 - \frac{\text{SSE}}{\text{SST}}$$
+$$\text{SST} =	\text{SSR} + \text{SSE}, \quad R^2 = \frac{\text{SSR}}{\text{SST}} = 1 - \frac{\text{SSE}}{\text{SST}}$$
 
 ### Artificial Neural Network (ANN)
 
@@ -96,9 +96,9 @@ $$	\text{PerformanceIndex} \approx -33.755 + 2.861(x_1) + 1.018(x_2) + 0.474(x_3
 
 | Term | Estimate ($\hat{ eta}$) | Standard Error (SE) | $t$-Statistic | $p$-Value | Significance ($ lpha=0.05$) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **(Intercept)** | -33.755 | 0.15073 | -223.94 | $ \approx 0$ | Statistically Significant |
-| **$x_1$ (Hours Studied)** | 2.8612 | 0.00949 | 301.61 | $ \approx 0$ | Statistically Significant |
-| **$x_2$ (Previous Scores)** | 1.0180 | 0.00141 | 721.84 | $ \approx 0$ | Statistically Significant |
+| **(Intercept)** | -33.755 | 0.15073 | -223.94 | $\approx 0$ | Statistically Significant |
+| **$x_1$ (Hours Studied)** | 2.8612 | 0.00949 | 301.61 | $\approx 0$ | Statistically Significant |
+| **$x_2$ (Previous Scores)** | 1.0180 | 0.00141 | 721.84 | $\approx 0$ | Statistically Significant |
 | **$x_3$ (Sleep Hours)** | 0.4738 | 0.01444 | 32.82 | $7.62 	\times 10^{-220}$ | Statistically Significant |
 | **$x_4$ (Question Papers)** | 0.1972 | 0.00851 | 23.17 | $1.75 	\times 10^{-114}$ | Statistically Significant |
 
