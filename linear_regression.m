@@ -24,19 +24,9 @@ Xd = [data.HoursStudied, ...
       data.SampleQuestionPapersPracticed, ...
       data.PerformanceIndex];
 
-% % Normalization (optional)
-% mu = mean(Xd); 
-% sigma = std(Xd); % Standard deviation
-% Xd = (Xd - mu) ./ sigma;
-% Xd = Xd ./ max(Xd);
-
 % Exploratory scatter plot matrix
 figure(1);
 plotmatrix(Xd);
-
-% % Remove outliers in PerformanceIndex and create the histogram (optional)
-% idx = isoutlier(Xd(:, 5));
-% Xd(idx, :) = [];
 
 % Distribution of the target variable (normally distributed)
 figure(2);
@@ -76,13 +66,6 @@ plot(mdl);
 
 figure(4);
 plotResiduals(mdl); % Histogram of the model training residuals
-
-% % Stepwise regression adjustments (optional)
-% % Remove variables with p-value above 0.05 (none in this specific case)
-% newMdl1 = removeTerms(mdl, "x1"); 
-% % Improve the model by adding or removing variables
-% newMdl2 = step(newMdl1, 'NSteps', 30); 
-% plotResiduals(newMdl2);
 
 %% =========================================================================
 % 4. Model Testing and Evaluation
