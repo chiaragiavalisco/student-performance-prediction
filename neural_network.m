@@ -35,18 +35,6 @@ dataNormalized = (Xd - mu) ./ sigma;
 X = dataNormalized(:, 1:4)';
 Y = dataNormalized(:, 5)';
 
-% % Outlier removal (optional)
-% for i = 1:11
-%     d(i) = mu(i) - 3 * sigma(i);
-%     u(i) = mu(i) + 3 * sigma(i);
-%     G(:, i) = d(i) < X(:, i) < u(i);
-%     X(G == 0) = NaN;
-% end
-% 
-% % Remove rows containing NaN values
-% Y(any((G == 0), 2), :) = [];
-% X(any(isnan(X), 2), :) = [];
-
 %% =========================================================================
 % 2. Neural Network Architecture and Data Splitting
 % =========================================================================
